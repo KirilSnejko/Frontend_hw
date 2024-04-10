@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-size: 1.1rem;
+    }
+
+    .menu1 a {
+      color: green;
+      border-right: solid red 5px;
+      height: 50px;
+      line-height: 50px;
+      padding: 25px;    
+    }
+    .menu1 a:last-child {
+      border: none;
+    }
+    .menu1 {
+      margin: 30px 0px 30px 0px;
+    }
+
+    .menu2 ul {
+      display: flex;
+      list-style: none;
+      padding: 25px;
+      margin: 0px;           
+    }
+    .menu2 li {      
+      padding-right: 25px;
+      border-right: solid red 5px;
+      margin-right: 30px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+    .menu2 li a {
+      color: green;
+    }
+    .menu2 li:last-child {
+      border: none;
+    }
+
+    .menu3 table tr td {
+      border-right: solid red 5px;
+      padding: 25px;
+    }
+    .menu3 table tr td a {
+      color: green;
+    }
+    .menu3 table tr td:last-child {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+    <div class="menu1">
+      <a href=''>первая ссылка</a>
+      <a href=''>вторая ссылка</a>
+      <a href=''>третья ссылка</a>
+      <a href=''>четвёртая ссылка</a>
+      <a href=''>пятая ссылка</a>
+    </div>
+
+    <div class="menu2">
+      <ul>
+        <li><a href="">первая ссылка</a></li>
+        <li><a href="">вторая ссылка</a></li>
+        <li><a href="">третья ссылка</a></li>
+        <li><a href="">четвёртая ссылка</a></li>
+        <li><a href="">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div class="menu3">
+      <table>
+        <tr>
+          <td><a href="">первая ссылка</a></td>
+          <td><a href="">вторая ссылка</a></td>
+          <td><a href="">третья ссылка</a></td>
+          <td><a href=''>четвёртая ссылка</a></td>
+          <td><a href=''>пятая ссылка</a></td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>
