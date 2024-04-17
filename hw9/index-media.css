@@ -1,0 +1,27 @@
+@media screen and (max-width: 900px) {
+
+  div.menu {
+    width: 100%; 
+    float: none; 
+    margin-top: 20px;
+  }
+  div.main {
+    width: 100%;
+    float: none;
+
+  }
+  body h4.main_discription {
+    font-size: 1.3em ;
+    text-align: justify;
+    padding-right: 60px;
+  }
+
+  p.book_description {
+    font-size: 1.2em;
+  }
+
+  div.book img {
+    width: 100px;
+  }
+
+}

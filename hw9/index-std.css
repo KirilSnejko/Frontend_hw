@@ -1,0 +1,54 @@
+@import "index-media.css";
+
+.header {
+  text-align: center;
+  font-family: Roboto, serif;
+}
+.image_header { 
+  text-align: center;
+}
+.main_discription {
+  font-family: Roboto,serif; 
+  font-weight: 500;
+  padding-right: 20px;
+}
+.main {
+  margin-left: 0;
+  overflow: hidden;
+  float: right;
+  width: 75%;
+}
+.menu {
+  width: 200px;
+  float: left;
+}
+.book {
+  font-family: Montserrat, serif;
+  text-indent: 2em; 
+  width: 90%;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 10px;
+}
+.book_description {
+  margin: 10px;
+}
+.header_menu {
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+}
+.hypers_menu1 {
+  text-transform: uppercase;
+}
+.menu2_names{
+  text-align: left;
+}
+.footer {
+  clear: both;
+  text-align: center;
+  font-size: small;
+  height: 40px;
+  line-height: 1.5;
+}
+
