@@ -7,32 +7,32 @@
 </head>
 <body>
   <style>
-     form {
+    form {
       /* border: double 3px red; */
       width: 95%;
       padding-left: 15px;
-     }
-     label {
+    }
+    label {
       line-height: 1.5em;
-     }
-     input[id="article_title"] {
+    }
+    input[id="article_title"] {
       width: 50%;
       margin-left: 60px;
-     }
-     select[id="heading"] {
+    }
+    select[id="heading"] {
       width: 25%;
       margin-left: 116px;
-     }
-     input[value="web"] {
+    }
+    input[value="web"] {
       margin-left: 90px;
-     }
-     textarea {
+    }
+    textarea {
       width: 70%;
       margin-bottom: 5px;
-     }
-     .art_text {
+    }
+    .art_text {
       display: block;
-     }
+    }
 
     @media screen and (max-width: 620px){
       form label {
@@ -41,16 +41,17 @@
       form input[id="article_title"], 
         select[id="heading"],
         input[value="web"] {
-        margin-left: 0;
+          margin-left: 0px;
       }
       form input[id="article_title"], 
-        select[id="heading"], textarea {
+        select[id="heading"], 
+        textarea {
           width: 80%;
-        }
-
-
+      }
+      form .web {
+        margin-left: 5px;
+      }
     }
-
   </style>
 
   <form method="get" action="Search.php">
@@ -67,15 +68,16 @@
     <br>
 
     <label>Публикация:</label>
-    <input type="radio" name="publication" 
-      value="web"><span>на сайте</span>
-    <input type="radio" name="publication" 
-    value="magazine"><span>в журнале</span>
-    <input type="radio" name="publication" 
-    value="all"><span>на сайте и в журнале</span>
+    <label class="web"><input type="radio" name="publication" 
+        value="web"><span>на сайте</span></label>
+    <label><input type="radio" name="publication" 
+        value="magazine"><span>в журнале</span></label>
+    <span><input type="radio" name="publication" 
+        value="all"><span>на сайте и в журнале</span>
+    </span> 
     <br>
 
-    <span>Разрешить комментарий:</spanl>
+    <span>Разрешить комментарий:</span>
     <input type="checkbox" name="let_comment" checked>
     <br>
 
@@ -84,6 +86,7 @@
     <br>
     
     <input type="submit" value="Опубликовать">
+
   </form>
 </body>
 </html>
