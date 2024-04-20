@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+     form {
+      /* border: double 3px red; */
+      width: 95%;
+      padding-left: 15px;
+     }
+     label {
+      line-height: 1.5em;
+     }
+     input[id="article_title"] {
+      width: 50%;
+      margin-left: 60px;
+     }
+     select[id="heading"] {
+      width: 25%;
+      margin-left: 116px;
+     }
+     input[value="web"] {
+      margin-left: 90px;
+     }
+     textarea {
+      width: 70%;
+      margin-bottom: 5px;
+     }
+     .art_text {
+      display: block;
+     }
+
+    @media screen and (max-width: 620px){
+      form label {
+        display: block;
+      }
+      form input[id="article_title"], 
+        select[id="heading"],
+        input[value="web"] {
+        margin-left: 0;
+      }
+      form input[id="article_title"], 
+        select[id="heading"], textarea {
+          width: 80%;
+        }
+
+
+    }
+
+  </style>
+
+  <form method="get" action="Search.php">
+    
+    <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+    <label for="article_title">Название статьи:</label>
+    <input type="text" id="article_title" maxlength="50">
+    <br>
+    
+    <label for="heading">Рубрика:</label>
+    <select name="heading" id="heading">
+      <option value="1" selected>программирование</option>
+    </select>
+    <br>
+
+    <label>Публикация:</label>
+    <input type="radio" name="publication" 
+      value="web"><span>на сайте</span>
+    <input type="radio" name="publication" 
+    value="magazine"><span>в журнале</span>
+    <input type="radio" name="publication" 
+    value="all"><span>на сайте и в журнале</span>
+    <br>
+
+    <span>Разрешить комментарий:</spanl>
+    <input type="checkbox" name="let_comment" checked>
+    <br>
+
+    <label class="art_text">Текст статьи:</label>
+    <textarea name="article_text" cols="30"></textarea>
+    <br>
+    
+    <input type="submit" value="Опубликовать">
+  </form>
+</body>
+</html>
