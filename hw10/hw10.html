@@ -11,6 +11,7 @@
       /* border: double 3px red; */
       width: 95%;
       padding-left: 15px;
+
     }
     label {
       line-height: 1.5em;
@@ -54,39 +55,40 @@
     }
   </style>
 
-  <form method="get" action="Search.php">
-    
-    <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
-    <label for="article_title">Название статьи:</label>
-    <input type="text" id="article_title" maxlength="50">
-    <br>
-    
-    <label for="heading">Рубрика:</label>
-    <select name="heading" id="heading">
-      <option value="1" selected>программирование</option>
-    </select>
-    <br>
+  
+    <form method="get" action="https://fe.it-academy.by/TestForm.php">
+      
+      <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+      <label for="article_title">Название статьи:</label>
+      <input type="text" id="article_title" maxlength="50">
+      <br>
+      
+      <label for="heading">Рубрика:</label>
+      <select name="heading" id="heading">
+        <option value="1" selected>программирование</option>
+      </select>
+      <br>
 
-    <label>Публикация:</label>
-    <label class="web"><input type="radio" name="publication" 
-        value="web"><span>на сайте</span></label>
-    <label><input type="radio" name="publication" 
-        value="magazine"><span>в журнале</span></label>
-    <span><input type="radio" name="publication" 
-        value="all"><span>на сайте и в журнале</span>
-    </span> 
-    <br>
+      <label>Публикация:</label>
+      <label class="web"><input type="radio" name="publication" 
+          value="web"><span>на сайте</span></label>
+      <label><input type="radio" name="publication" 
+          value="magazine"><span>в журнале</span></label>
+      <span><input type="radio" name="publication" 
+          value="all"><span>на сайте и в журнале</span>
+      </span> 
+      <br>
 
-    <span>Разрешить комментарий:</span>
-    <input type="checkbox" name="let_comment" checked>
-    <br>
+      <span>Разрешить комментарий:</span>
+      <input type="checkbox" name="let_comment" checked>
+      <br>
 
-    <label class="art_text">Текст статьи:</label>
-    <textarea name="article_text" cols="30"></textarea>
-    <br>
-    
-    <input type="submit" value="Опубликовать">
+      <label class="art_text">Текст статьи:</label>
+      <textarea name="article_text" cols="30"></textarea>
+      <br>
+      
+      <input type="submit" value="Опубликовать">
 
-  </form>
+    </form>
 </body>
 </html>
