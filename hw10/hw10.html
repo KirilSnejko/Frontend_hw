@@ -11,82 +11,79 @@
       /* border: double 3px red; */
       width: 95%;
       padding-left: 15px;
-
-    }
-    label {
       line-height: 1.5em;
     }
-    input[id="article_title"] {
-      width: 50%;
-      margin-left: 60px;
+    .empty {
+      clear: both;
     }
-    select[id="heading"] {
-      width: 25%;
-      margin-left: 116px;
+    .div_title {
+      float: left;
+      width: 10em;
     }
-    input[value="web"] {
-      margin-left: 90px;
+    .div_input {
+      margin-left: 10em;
     }
-    textarea {
-      width: 70%;
-      margin-bottom: 5px;
+    #article_title, textarea {
+      width: 100%;
     }
-    .art_text {
-      display: block;
+    select {
+      width: 35%;
     }
 
-    @media screen and (max-width: 620px){
+    @media screen and (max-width: 555px) {
+      form .div_title {
+        float: none;
+      }
+      form .div_input {
+        margin-left: 0;
+        width: 70%;
+      }
+      form select, textarea {
+        width: 70%;
+      }
       form label {
         display: block;
-      }
-      form input[id="article_title"], 
-        select[id="heading"],
-        input[value="web"] {
-          margin-left: 0px;
-      }
-      form input[id="article_title"], 
-        select[id="heading"], 
-        textarea {
-          width: 80%;
-      }
-      form .web {
-        margin-left: 5px;
       }
     }
   </style>
 
-  
     <form method="get" action="https://fe.it-academy.by/TestForm.php">
       
-      <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
-      <label for="article_title">Название статьи:</label>
-      <input type="text" id="article_title" maxlength="50">
-      <br>
+      <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p> 
       
-      <label for="heading">Рубрика:</label>
-      <select name="heading" id="heading">
-        <option value="1" selected>программирование</option>
-      </select>
-      <br>
-
-      <label>Публикация:</label>
-      <label class="web"><input type="radio" name="publication" 
-          value="web"><span>на сайте</span></label>
-      <label><input type="radio" name="publication" 
-          value="magazine"><span>в журнале</span></label>
-      <span><input type="radio" name="publication" 
-          value="all"><span>на сайте и в журнале</span>
-      </span> 
-      <br>
-
-      <span>Разрешить комментарий:</span>
-      <input type="checkbox" name="let_comment" checked>
-      <br>
-
-      <label class="art_text">Текст статьи:</label>
-      <textarea name="article_text" cols="30"></textarea>
-      <br>
+      <div class="div_title">Название статьи:</div>
+      <div class="div_input"><input type="text"; id="article_title";></div>
+      <div class="empty"></div>
       
+      <div>
+        <div class="div_title">Рубрика:</div>
+        <select name="heading">
+          <option value="1">программирование</option>
+        </select>
+      </div>
+
+      <div>
+        <div class="div_title">Публикация:</div>
+        <div class="radio_div">
+          <label><input type="radio" name="publication" value="1">на сайте</label>
+          <label><input type="radio" name="publication" value="2">в журнале</label>
+          <label><input type="radio" name="publication" value="3">на сайте и в журнале</label>
+        </div>  
+      </div>
+      <div class="empty"></div>
+
+      <div>
+        <span>Разрешить комментарий:</span>
+        <input type="checkbox" name="let_comment" checked>
+        <br>
+      </div>
+
+      <div class="div_title">Текст статьи:</div>
+      <div class="empty"></div>
+      <div>
+        <textarea name="article_text"></textarea>
+      </div>
+
       <input type="submit" value="Опубликовать">
 
     </form>
