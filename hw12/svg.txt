@@ -1,0 +1,2 @@
+<i class="fa-solid fa-masks-theater"></i>
+<script src="https://kit.fontawesome.com/9b36b40e7b.js" crossorigin="anonymous"></script>
