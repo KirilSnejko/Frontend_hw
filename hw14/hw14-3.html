@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Путешествия</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+</head>
+<style>
+  article, nav, .main_content, footer {
+    color: rgb(30, 48, 80);
+  }
+  header {
+    /* border: solid 1px; */
+    height: 160px;
+    background-image: linear-gradient(#4169E1 10%,#87CEFA);
+    margin-bottom: 5px;
+  }
+  article {
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    /* border: solid 1px; */
+    width: 100%;
+    text-align: center;
+    padding-top: 2.5rem;
+    background-image: url(plain.png);
+    background-repeat: no-repeat;
+    animation: plain 6s infinite cubic-bezier(0.1, 0.1, 0.8, 0.5);
+    text-shadow: 1px 1px 5px #87CEFA;
+  }
+  @keyframes plain {
+    0% {
+      background-position: left top;
+    }
+    100% {
+      background-position: right top;
+    }
+  }
+  nav {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 3rem;
+    justify-content: center;
+    /* border: 1px solid; */
+    margin: 0.5rem 3rem 0 3rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0px 10px 3px #4169E1;
+  }
+  .navigation {
+    width: fit-content;
+    margin: 0.5rem;
+    text-align: center;
+  }
+  .list_directions {
+    max-height: 0;
+    opacity: 0;
+    overflow-y: scroll;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.1, 0.1, 0.8, 0.5);
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    width: 160px;
+    font-size: 1.2rem;
+  }
+  .directions:hover .list_directions {
+    opacity: 1;
+    max-height: 5.5rem;
+  }
+  .list_directions div:hover {
+    background-color: #e7f5fe;
+    /* border: solid 1px; */
+  }
+  .directions {
+    text-align: left;
+  }
+  section {
+    /* border: solid 1px; */
+    background-size: cover;
+    background-position: 50% 50%;
+    filter:brightness(80%);
+    padding-top: 5rem;
+    text-shadow: 2px 2px 5px white;
+  }
+  section:hover {
+    filter: none;
+    scale: 1.01;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  #spain {
+    background-image: url(Spain.jpg);
+    grid-area: spain;
+  }
+  #bali {
+    background-image: url(Bali.jpg);
+    grid-area: bali;
+  }
+  #egipt {
+    background-image: url(Egypt.jpg);
+    grid-area: egipt;
+  }
+  #czech {
+    background-image: url(Czech.jpg);
+    grid-area: czech;
+  }
+  #turkey {
+    background-image: url(Turkey.jpg);
+    grid-area: turkey;
+  }
+  #italy {
+    background-image: url(Italy.jpg);
+    grid-area: italy;
+  }
+  .main_content {
+    display: grid;
+    grid-template-rows: repeat(3, 225px);
+    grid-template-columns: 33% 1fr 1fr;
+    gap: 5px;
+    grid-template-areas: 
+    "spain bali bali"
+    "spain egipt czech"
+    "spain turkey italy";
+    font-size: 3rem;
+    text-align: center;
+  }
+  footer {
+    background-color: rgb(126, 186, 239);
+    font-size: 1.5rem;
+    height: 55px;
+    /* border: solid 1px; */
+    margin-top: 5px;
+    background-image: linear-gradient(#87CEFA 10%, #4169E1);
+  }
+  address {
+    font-style: normal;
+    padding-top: 0.5rem;
+    width: fit-content;
+    margin: auto;
+  }
+  address:hover, section:hover, .navigation {
+    cursor: pointer;
+  }
+  @media all and (max-width: 760px) {
+    header {
+      display: block;
+      height: 140px;
+    }
+    article {
+      font-size: 2rem;
+    }
+    nav {
+      margin: 0.5rem 3rem 0.5rem 3rem;
+      gap: 0;
+      font-size: 1.2rem;
+      flex-wrap: nowrap;
+    }
+    .directions {
+    text-align: center;
+    }
+    .list_directions {
+      font-size: 1.1rem;
+      width: 120px;
+    }
+    .main_content {
+      font-size: 2rem;
+      grid-template-rows: repeat(4, 200px);
+      grid-template-columns: 50% 1fr;
+      grid-template-areas: 
+      "spain egipt"
+      "spain turkey"
+      "spain italy"
+      "bali czech";
+    }
+  }
+  @media all and (max-width: 540px) {
+    .navigation span {
+      display: none;
+    }
+    .list_directions {
+      width: fit-content;
+    }
+    article {
+      font-size: 6vw;
+      background-size: 10%;
+    }
+    header {
+      height: 125px;
+    }
+    .main_content {
+      font-size: 2rem;
+      grid-template-rows: repeat(6, 200px);
+      grid-template-columns: 100%;
+      grid-template-areas: 
+      "egipt"
+      "turkey"
+      "italy"
+      "bali"
+      "czech"
+      "spain";
+    }
+    #spain {
+      background-position: 50% 60%;
+    }
+  }
+
+</style>
+<body>
+  <header>
+    <article>Путешествуй с нами!</article>
+    <nav>
+      <div class="directions navigation">
+        <span>Направления</span><i class="fa-solid fa-earth-americas"></i>
+        <div class="list_directions">
+          <div>Италия</div>
+          <div>Испания</div>
+          <div>Турция</div>
+          <div>Бали</div>
+          <div>Египет</div>
+          <div>Чехия</div>
+          <div>Венгрия</div>
+        </div>
+      </div>
+      <div class="visas navigation"><span>Визы</span><i class="fa-brands fa-cc-visa"></i></div>
+      <div class="gallery navigation"><span>Галерея</span><i class="fa-solid fa-image"></i></div>
+      <div class="prices navigation"><span>Цены</span><i class="fa-solid fa-wallet"></i></div>
+    </nav>
+  </header>
+  <main class="main_content">
+    <section id="spain">Испания</section>
+    <section id="bali">Бали</section>
+    <section id="egipt">Египет</section>
+    <section id="czech">Чехия</section>
+    <section id="turkey">Турция</section>
+    <section id="italy">Италия</section>
+  </main>
+  <footer>
+    <address>Как нас найти<i class="fa-solid fa-phone-volume"></i></address>
+  </footer>
+  <script src="https://kit.fontawesome.com/9b36b40e7b.js" crossorigin="anonymous"></script>
+</body>
+</html>
