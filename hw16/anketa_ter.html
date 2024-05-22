@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  
+  const surname = prompt('Введите вашу фамилию','Фамилия');
+  const name = prompt('Введите ваше имя','Имя');
+  const second_name = prompt('Введите ваше отчество','Отчество');
+
+  let age = prompt('Введите ваш возраст','18');
+  age = Number(age);
+
+  let male_or_female = confirm('Ваш пол мужской?');
+  const gender = male_or_female ? 'мужской' : 'женский';
+
+  const retied = (male_or_female && age > 62) || (male_or_female && age > 57) ? 'да' : 'нет';
+
+  const string1 = `ваше ФИО: ${surname} ${name} ${second_name}`;
+  const string2 = `ваш возраст в годах: ${age}`;
+  const string3 = `ваш возраст в днях: ${parseInt(age*365.25)}`;
+  const string4 = `через 5 лет вам будет: ${age + 5}`;
+  const string5 = `ваш пол: ${gender}`;
+  const string6 = `вы на пенсии: ${retied}`;
+
+  alert(string1 + '\n' + string2 + '\n' + string3 + '\n' + 
+  string4 + '\n' + string5 + '\n' + string6)
+
+</script>
+</html>
