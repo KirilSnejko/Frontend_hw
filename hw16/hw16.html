@@ -37,7 +37,7 @@
   // do {
   //   day = prompt('Введите день недели','введите число от 1 до 7');
   //   if (day === null) {
-  //     console.log('Вы вышли из программы!');
+  //     alert('Вы вышли из программы!');
   //     break;
   //   }
   //   day = Number(day)  
@@ -63,32 +63,42 @@
 
 
   // 4
-  // let genres = prompt('Какой жанр предпочитаете?','1 - Роман, 2 - Детектив, 3 - Фентези');
-  // genres = Number(genres);
-
-  // let modern_literature = confirm('Предпочитаете современную литературу');
-  // let rus_writer = confirm('Хотели бы книгу русского автора?');
-  
-  // let recommendation;
-
-  // if (genres === 1 && modern_literature == false && rus_writer == true ) {
-  //   console.log("Предлагаем вам прочитать книгу - 'Война и мир'");
-  // } 
-  // else if (genres === 3 && modern_literature == true ) {
-  //   if (rus_writer == true) {
-  //     console.log("Предлагаем вам прочитать книгу - 'Ночной дозор'");
-  //   } else {
-  //     console.log("Предлагаем вам прочитать книгу - 'Гарри Поттер'");
+  // let genres;
+  // let exit = false;
+  // do {genres = prompt('Какой жанр предпочитаете?','1 - Роман, 2 - Детектив, 3 - Фентези');
+  //   genres = Number(genres);
+  //   if (genres == 0) {
+  //     alert('Вы вышли из программы')
+  //     exit = true;
+  //     break;
   //   }
-  // } 
-  // else if (genres === 2 && rus_writer == false) {
-  //   if (modern_literature == false) {
-  //     console.log("Предлагаем вам прочитать книгу - 'Шерлок Хомс'");
+  // } while (isNaN(genres) || (genres < 1 || genres > 3));
+
+  // if (!exit) {
+  //   let modern_literature = confirm('Предпочитаете современную литературу');
+  //   let rus_writer = confirm('Хотели бы книгу русского автора?');
+    
+  //   let recommendation;
+
+  //   if (genres === 1 && modern_literature == false && rus_writer == true ) {
+  //     console.log("Предлагаем вам прочитать книгу - 'Война и мир'");
+  //   } 
+  //   else if (genres === 3 && modern_literature == true ) {
+  //     if (rus_writer == true) {
+  //       console.log("Предлагаем вам прочитать книгу - 'Ночной дозор'");
+  //     } else {
+  //       console.log("Предлагаем вам прочитать книгу - 'Гарри Поттер'");
+  //     }
+  //   } 
+  //   else if (genres === 2 && rus_writer == false) {
+  //     if (modern_literature == false) {
+  //       console.log("Предлагаем вам прочитать книгу - 'Шерлок Хомс'");
+  //     } else {
+  //       console.log("Предлагаем вам прочитать книгу - 'Девушка в поезде'");
+  //     }
   //   } else {
-  //     console.log("Предлагаем вам прочитать книгу - 'Девушка в поезде'");
+  //     console.log("К сожалению, не смогли подобрать вам книгу");
   //   }
-  // } else {
-  //   console.log("К сожалению, не смогли подобрать вам книгу");
   // }
 
 </script>
