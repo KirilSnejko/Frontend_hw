@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function getName() {
+      let name;
+      do {
+        name = prompt("Введите имя пользователя");
+        if (name == null || name == "") {
+                alert("Вы ничего не ввели!");
+        }
+      } while (name == null || name == '');
+      return name;
+    }
+
+    function getData(lesson) {
+      let size;
+      //проверяем число на валидность
+      do {
+        // проверяем тип вводимых значений: оценки, либо занятия.
+          size = lesson ? getMark(lesson) : getLessons();
+          if (size == null || size == "") {
+              alert("Вы ничего не ввели!");
+          } else if (isNaN(size)) {
+              alert("Вы ввели не число!");
+          } else if (parseInt(size) <= 0) {
+              alert("Нужно ввести положительное число!");
+          } else if (parseInt(size) != parseFloat(size)) {
+              alert("Нужно ввести целое число!");
+          } else {
+              size = parseInt(size);
+          }
+      } while (size !== parseInt(size));
+      return size;
+    }
+
+    function getLessons() {
+      return size = prompt("Введите количество занятий");
+    }
+
+    function getMark(lesson) {
+      return size = prompt("Введите оценку за занятие " + lesson);
+    }
+
+    function createUserObject(name, lessons) {
+      let lessonObject = {};
+      for (let i = 1; i <= lessons; i++) {
+        // вызываем getData c параметром, в котором прописан конкретный lesson
+        // таким образом получаем оценку за конкретное занятие и кладем в обьект
+        lessonObject[i] = getData(i);
+      }
+      let user = {
+        name: name,
+        lessons: lessonObject
+      }
+      return user;
+    }
+
+    function result() {
+      let name = getName();
+      let lessons = getData();  // вызываем getData без параметра - это будет значить, что получаем кол-во занятий
+      obj = createUserObject(name, lessons);
+      console.log(obj);
+      return obj
+    }
+
+
+    // средний бал 
+    
+    let obj;
+
+    function calculateAverage() {
+      if (!obj) {
+        alert('Сначала нужно создать объект с оценками')
+        return
+      }
+      let sumMarks = 0;
+      let numberOfLessons = 0;
+      for (let key in obj.lessons) {
+        sumMarks += obj.lessons[key]
+        numberOfLessons ++
+      }
+      average = sumMarks / numberOfLessons;
+      alert(`Средний бал: ${average}`)
+      console.log(`Средний бал: ${average}`);
+      return average
+    }
+
+    let average;
+
+    function checkPassProf() {
+      if (!average) {
+        alert('Сначала нужно рассчитать средний бал')
+        return
+      }
+      
+      if (average < 7.5) {
+        let missPoints = 7.5 - average;
+        alert(`Вам не хватает ${missPoints}`)
+        console.log(`Не хватает балов: ${missPoints}`);
+      } else {
+        alert('Баллов достаточно для прохождения на следующий курс')
+        console.log('Баллов достаточно для прохождения на следующий курс');
+      }
+    }
+
+
+
+    
+
+    
+  </script>
+  <button onclick="result()"> Создаем обьект с оценками</button>
+  <button onclick="calculateAverage()"> Подсчитываем средний балл</button>
+  <button onclick="checkPassProf()"> Прохожу на  проф курс? </button>
+</body>
+</html>
