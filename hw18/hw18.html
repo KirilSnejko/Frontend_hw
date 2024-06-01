@@ -62,7 +62,7 @@
 
   // let marketProducts = [
   //   {
-  //     name: 'яблоки', 
+  //     name: 'яблоко', 
   //     price: 3.5,
   //     count: 10
   //   },
@@ -112,7 +112,7 @@
 
   // function getProduct() {
   //   while (true) {
-  //     let nameProduct = prompt('Выбирите товар','яблоки/апельсин/банан/мандарин/груша');
+  //     let nameProduct = prompt('Выбирите товар','яблоко/апельсин/банан/мандарин/груша');
   //     if (nameProduct == '') {
   //       alert('Вы ничего не ввели')
   //     }
@@ -121,7 +121,7 @@
   //       break;
   //     }
   //     else if (!isNaN(nameProduct)) {
-  //       alert('Продукт нужно вводить словами','яблоки/апельсин/банан/мандарин/груша')
+  //       alert('Продукт нужно вводить словами','яблоко/апельсин/банан/мандарин/груша')
   //     } else {
   //       return nameProduct;
   //     }
@@ -130,6 +130,57 @@
  
   // let productName = getProduct();
   // priceProduct(productName);
+
+
+    // function howMuchMoney() {
+    //   let amountMoney;
+    //   do { amountMoney = prompt('Введите какое количество денег у вас есть?')
+    //     if (amountMoney == null) {
+    //       alert('Buy');
+    //       break;
+    //     }
+    //     else if (amountMoney == '') {
+    //       alert('Вы ничего не ввели!')
+    //     }
+    //     else if (amountMoney <= 0) {
+    //       alert('Колличество не может быть меньше 0 или 0')
+    //       amountMoney = undefined
+    //     }
+    //     else if (isNaN(amountMoney)) {
+    //       alert('Нужно ввести число')
+    //     }
+    //   } while (isNaN(amountMoney))
+    //   if (amountMoney) {
+    //     amountMoney = Number(amountMoney);
+    //   }
+    //   return amountMoney
+    // }
+
+    // function quantityProducts(amountMoney) {
+    //   let availableListProducts = [];
+    //   for (let key in marketProducts) {
+    //     let quantity = amountMoney / marketProducts[key].price
+    //     availableListProducts[key] =  parseInt(quantity) + ' ' + `кг ${marketProducts[key].name}`
+    //   }
+    //   return availableListProducts;
+    // }
+
+    // function alertAvailableProducts(availableListProducts) {
+    //   let list = ''
+    //   for (let i=0; i<availableListProducts.length; i++) {
+    //     list += availableListProducts[i]
+    //     if (i != availableListProducts.length-1) {
+    //       list += ' ' + 'или' + ' '
+    //     } 
+    //   }
+    //   alert(`Вы можете купить: ${list}`);
+    // }
+    
+
+    // let money = howMuchMoney();
+    // let quantity = quantityProducts(money);
+    // alertAvailableProducts(quantity)
+
 
 
 </script>
