@@ -10,52 +10,68 @@
 </body>
 <script>
 
-  // 1 
+  // 1 исправил (добавил данные в массив, вывел массив, и посчитал только численные элементы)
 
   // function countSummOfPrompt() {
+  //   arr = [];
   //   let i = 0;
   //   let sum = 0;
   //   while (i < 10) {
   //     let data = prompt('Введите данные массива');
   //     data = Number(data);
   //     if (!isNaN(data)) {
-  //       sum += data;
+  //       sum += data 
   //     }
+  //     arr[i] = data
   //     i += 1;
   //   }
-  //   console.log(sum);
+  //   console.log(`Сумма численных элементов массива = ${sum}`);
+  //   console.log(arr);
   // }
 
   // countSummOfPrompt()
 
   
   // 2
-
-  // function matrixWidth(first) {
-  //   let matrixWidth = [];
-  //   for (let i=0; i<first; i++) {
-  //     matrixWidth[i] = i
+  // function getParameters(parameterType) {
+  //   let parameter;
+  //   do {
+  //     parameter = prompt(`Введите ${parameterType} матрицы`)
+  //     if (parameter === '' || parameter == null ) {
+  //       alert('Вы ничего не ввели')
+  //     }
+  //     else if (isNaN(parameter)) {
+  //       alert(`Введённый параметр должен быть числом`)
+  //     }
+  //     else if (parseInt(parameter) <= 0) {
+  //       alert(`Введённый параметр должен быть положительным`)
+  //     }
+  //     else if (parseInt(parameter) != parseFloat(parameter)) {
+  //       alert(`Введённый параметр  должен быть целым числом`)
+  //     }
+  //   } while (isNaN(parameter) || parseFloat(parameter) <= 0 || parseInt(parameter) != parseFloat(parameter));
+  //   if (parameter !== null) {
+  //     return Number(parameter);
   //   }
-  //   return matrixWidth
   // }
 
-  // function createMatrix(matrixWidth, secondParameter) {
-  //   let matrix = [];
-  //   for (let i=0; i<secondParameter; i++) {
-  //     matrix[i] = matrixWidth
+  // function createArray(rows,columns) {
+  //   let array = [];
+  //   let count = 1;
+  //   for (let i = 0; i < rows; i++) {
+  //     array[i] = []
+  //     for (let j = 0; j < columns; j++) {
+  //       array[i][j] = count++
+  //     }
   //   }
-  //   console.log(matrix);
+  //   console.log(array);
+  //   return array;
   // }
 
-  // function takeSizeMatrix() {
-  //   let matrixLength = parseInt(prompt('Введите длину матрицы'))
-  //   let matrixHight = parseInt(prompt('Введите высоту матрицы'))
-  //   return [matrixLength, matrixHight]
-  // }
-
-  // const arr = takeSizeMatrix()
-  // const arrWidth = matrixWidth(arr[0])
-  // createMatrix(arrWidth, arr[1])
+  // let rows = getParameters('строки');
+  // let columns = getParameters('столбцы');
+  // createArray(rows,columns)
+  
 
 
   // 3
@@ -180,6 +196,83 @@
     // let money = howMuchMoney();
     // let quantity = quantityProducts(money);
     // alertAvailableProducts(quantity)
+
+
+    // 4
+
+    // function getParameters(parameterType) {
+    //   let parameter;
+    //   do {
+    //     parameter = prompt(`Введите ${parameterType} матрицы`)
+    //     if (parameter === '' || parameter == null ) {
+    //       alert('Вы ничего не ввели')
+    //     }
+    //     else if (isNaN(parameter)) {
+    //       alert(`Введённый параметр должен быть числом`)
+    //     }
+    //     else if (parseInt(parameter) <= 0) {
+    //       alert(`Введённый параметр должен быть положительным`)
+    //     }
+    //     else if (parseInt(parameter) != parseFloat(parameter)) {
+    //       alert(`Введённый параметр  должен быть целым числом`)
+    //     }
+    //   } while (isNaN(parameter) || parseFloat(parameter) <= 0 || parseInt(parameter) != parseFloat(parameter));
+    //   if (parameter !== null) {
+    //     return Number(parameter);
+    //   }
+    // }
+
+    // function createArray(rows,columns) {
+    //   let array = [];
+    //   for (let i = 1; i <= rows; i++) {
+    //     let row = [];
+    //     for (let j = 1; j <= columns; j++) {
+    //       let text = `значение ячейки ${i}-${j}`;
+    //       let item = getParameters(text);
+    //       row[j-1] = item;
+    //     }
+    //     array[i-1] = row
+    //   }
+    //   console.log(array);
+    //   return array;
+    // }
+
+    // function calculateItems(arr) {
+    //   let sumMainDiagonal = 0;
+    //   let sumSecondaryDiagonal = 0;
+    //   let sumRow = 0;
+
+    //   for (let i = 0; i < arr.length; i++ ) {
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //       if (i==j) {
+    //         sumMainDiagonal += arr[i][j]
+    //       }
+    //       if (j == arr.length - 1 - i) {
+    //         sumSecondaryDiagonal += arr[i][j]
+    //       }
+    //       sumRow += arr[i][j]; 
+    //     }
+    //     console.log(`Сумма элементов строки ${i + 1}: ${sumRow}`);
+    //     sumRow = 0;
+    //   }
+    //   console.log(`Сумма элементов на главной диагонали = ${sumMainDiagonal}`);
+    //   console.log(`Сумма элементов на побочной диагонали = ${sumSecondaryDiagonal}`);
+    // }
+
+    // function result() {
+    //   let rows = getParameters('строки');
+    //   let columns = getParameters('столбцы');
+    //   let arr = createArray(rows,columns)
+    //   calculateItems(arr)
+    // }
+
+    // result()
+
+    
+
+
+
+    
 
 
 

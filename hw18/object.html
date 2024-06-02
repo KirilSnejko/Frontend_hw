@@ -64,41 +64,28 @@
     function result() {
       let name = getName();
       let lessons = getData();  // вызываем getData без параметра - это будет значить, что получаем кол-во занятий
-      obj = createUserObject(name, lessons);
-      console.log(obj);
-      return obj
+      let obj = createUserObject(name, lessons);
+      console.log(obj)
     }
 
-
-    // средний бал 
-    
-    let obj;
-
     function calculateAverage() {
-      if (!obj) {
-        alert('Сначала нужно создать объект с оценками')
-        return
-      }
       let sumMarks = 0;
       let numberOfLessons = 0;
+      let name = getName()
+      let lessons = getData()
+      let obj = createUserObject(name,lessons)
       for (let key in obj.lessons) {
         sumMarks += obj.lessons[key]
         numberOfLessons ++
       }
-      average = sumMarks / numberOfLessons;
+      let average = sumMarks / numberOfLessons;
       alert(`Средний бал: ${average}`)
       console.log(`Средний бал: ${average}`);
       return average
     }
 
-    let average;
-
     function checkPassProf() {
-      if (!average) {
-        alert('Сначала нужно рассчитать средний бал')
-        return
-      }
-      
+      let average = calculateAverage()
       if (average < 7.5) {
         let missPoints = 7.5 - average;
         alert(`Вам не хватает ${missPoints}`)
@@ -108,15 +95,11 @@
         console.log('Баллов достаточно для прохождения на следующий курс');
       }
     }
-
-
-
     
-
-    
+ 
   </script>
   <button onclick="result()"> Создаем обьект с оценками</button>
-  <button onclick="calculateAverage()"> Подсчитываем средний балл</button>
+  <button onclick="average"> Подсчитываем средний балл</button>
   <button onclick="checkPassProf()"> Прохожу на  проф курс? </button>
 </body>
 </html>
