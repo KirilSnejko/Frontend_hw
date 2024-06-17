@@ -1,0 +1,72 @@
+#pageFooter {
+  display: flex;
+  /* border: solid 1px; */
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+}
+
+#footerLeftId {
+  /* border: solid 1px; */
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  max-width: 50%;
+
+}
+#footerRightId {
+  /* border: solid 1px; */
+  display: flex;
+}
+.footerLeft {
+  /* border: solid 1px; */
+  padding: 5px;
+  width: 200px; 
+}
+#navHeader {
+  /* display: none; */
+}
+.footerLeft ul {
+  list-style-type: none;
+  padding: 0;
+  font-family: Garamond, serif;
+}
+.footerLeft h2 {
+  padding: 0;
+  font-family: "Great Vibes", cursive;
+}
+.logAndSearchFooter {
+  /* border: solid 1px; */
+  justify-content: center;
+  /* align-items: center; */
+}
+#footerRightContainer {
+  display: flex;
+  flex-direction: column;
+  
+}
+.logAndSearchFooter .fa-brands {
+  font-size: 40px;
+}
+
+.logAndSearchFooter .booksyLogo {
+  margin: 10px 5px;
+  width: 60px;
+  border-radius: 5px;
+}
+
+#footerRightContainer iframe {
+  width: 100%;
+  height: 300px;
+}
+.footerLeft a {
+  text-decoration: none;
+  color: black;
+}
+footer {
+  background-image: linear-gradient(45deg, #FFFACD, #FFC0CB);
+}
+header {
+  background: white;
+}

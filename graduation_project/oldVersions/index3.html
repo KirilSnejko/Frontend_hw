@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup & Hairstyle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    margin: 0;
+    width: auto%;
+  }
+  header, footer, article, nav {
+    padding: 20px;
+    background: none;
+    box-sizing: border-box;
+    border: solid black 1px;
+  }
+  #pageHeader {
+    grid-area: header;
+    height: 165px;
+    display: flex;
+  }
+  #pageFooter {
+    grid-area: footer;
+    height: 150px;
+  }
+  #mainArticle { 
+    grid-area: article;      
+  }
+  #mainNav { 
+    grid-area: nav; 
+  }
+  #siteAds { 
+    grid-area: ads; 
+  }
+  .gridContainer { 
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "nav article ads"
+      "footer footer footer"; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 250px 2fr 1fr;
+    grid-gap: 0px;
+    height: 100vh;
+    margin: 0;
+  }
+  #logo {
+    /* border: solid 1px; */
+    display: flex;
+    flex-grow: 1;
+    height: 120px;
+    max-width: 400px;
+  }
+  #borderLogo {
+    /* border: solid 1px; */
+    margin: 5px;
+    background: linear-gradient(45deg,gold,MediumOrchid);
+    border-radius: 18px;
+    height: 104px;
+  }
+  #centerLogo {
+    margin: 2px;
+    /* border: solid 1px; */
+    background-image: url('images/logo1.PNG');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+  }
+  #h1Logo {
+    font-family: "Great Vibes", cursive;
+    font-weight: 500;
+    font-size: 2.75rem;
+    font-style: normal;
+    margin: 5px;
+    text-align: left;
+  }
+  #h6Logo {
+    text-align: center;
+    margin: 5px;
+    font-size: 1.0rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  #logoTypography {
+    margin: auto 0;
+  }
+  #headerGrid {
+    display: grid;
+    grid-template-areas: 
+      "logo navHeader logAndSearchHeader";
+    grid-template-columns: auto 6fr 1fr;
+    gap: 20px;
+    
+  }
+  #navHeader {
+    /* border: solid 1px; */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+  }
+  #logAndSearchHeader {
+    /* border: solid 1px; */
+    width: auto;
+    height: 120px;
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+  .asideNav {
+    width: 100px;
+    height: 100px;
+    /* border: solid 1px; */
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    background: linear-gradient(45deg,gold,MediumOrchid);
+    
+  }
+  .asideNavBorder {
+    width: 94px;
+    height: 92px;
+    border: solid 2px white;
+    border-radius: 50%;
+    margin: 2px;
+  }
+  .servis {
+    position: absolute;
+    top: 122px;
+  }
+  .hairstyle {
+    background-image: url('images/sprite/makeupNight.jpeg');
+    background-size: cover;
+  }
+  .makeup {
+    background-image: url('images/sprite/makeupWedding.jpeg');
+    background-size: cover;
+  }
+  .study {
+    background-image: url('images/sprite/stydy.jpg');
+    background-size: cover;
+  }
+  .servis2 {
+    background-image: url('images/sprite/servis2.jpeg');
+    background-size: cover;
+  }
+  .enterBorder {
+    width: 80px;
+    height: 80px;
+    background-image: url('images/logo2.PNG');
+    background-size: 50%;
+
+  }
+  .enter {
+    margin-top: 10px;
+    width: 88px;
+    height: 88px;
+  }
+  .search {
+    /* border: solid 1px; */
+    border-radius: 18px;
+    height: 56px;
+    width: 200px;
+    margin-top: 40px;
+  }
+  .searchBorder {
+    height: 46px;
+    /* border: solid 1px; */
+    border-radius: 15px;
+    width: 95%;
+  }
+  .buttonSearch {
+    width: 60px;
+    margin: 0;
+    top: 120px;
+  }
+
+
+</style>
+<body>
+  <div class="gridContainer">
+    <header id="pageHeader">
+      <div id="headerGrid">
+        <div id="logo">
+          <div id="borderLogo">
+            <div id="centerLogo">
+            </div>
+          </div>
+          <div id="logoTypography">
+            <h1 id="h1Logo">Marina Sniezhko</h1>
+            <h6 id="h6Logo">MAKEUP & HAIRSTYLE</h6>
+          </div>
+        </div>
+        <div id="navHeader">
+          <a href=""><div class="asideNav"><div class="asideNavBorder makeup"></div><div class="servis">макияж</div></div></a>
+          <a href=""><div class="asideNav"><div class="asideNavBorder hairstyle"></div><div class="servis">прически</div></div></a>
+          <a href=""><div class="asideNav"><div class="asideNavBorder study"></div><div class="servis">обучение</div></div></a>
+          <a href=""><div class="asideNav"><div class="asideNavBorder servis2"></div><div class="servis">vip услуги</div></div></a>
+        </div>
+        <div id="logAndSearchHeader">
+          <a href=""><div class="asideNav enter"><div class="asideNavBorder enterBorder"></div><div class="servis">войти</div></div></a>
+          <div class="asideNav search"><input type="text" class="asideNavBorder searchBorder"></input><input type="submit" value="поиск" class="servis buttonSearch"></div></div>
+        </div>
+      </div>
+    </header>
+    <article id="mainArticle">Article</article>
+    <nav id="mainNav">Nav</nav>
+    <nav id="siteAds">Ads</nav>
+    <footer id="pageFooter">Footer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+header, footer, article, nav {
+  padding: 20px;
+  background: none;
+  box-sizing: border-box;
+  border: solid black 1px;
+}
+.gridContainer { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer"; 
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 250px 2fr 20%;
+  height: 100vh;
+  gap: 0px;
+}
+#pageHeader {
+  grid-area: header;
+  height: 165px;
+}
+#pageFooter {
+  grid-area: footer;
+  height: 150px;
+}
+#mainArticle { 
+  grid-area: article;      
+}
+#mainNav { 
+  grid-area: nav;
+  background: linear-gradient(45deg, #FFFFE0, #E6E6FA);
+}
+#siteAds { 
+  grid-area: ads; 
+}
+#logo {
+  display: flex;
+  height: 120px;
+  max-width: 400px;
+}
+#borderLogo {
+  margin: 5px;
+  background: linear-gradient(45deg,gold,MediumOrchid);
+  border-radius: 18px;
+  height: 104px;
+}
+#centerLogo {
+  margin: 2px;
+  background-image: url('images/logo1.PNG');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
+#h1Logo {
+  font-family: "Great Vibes", cursive;
+  font-weight: 500;
+  font-size: 2.75rem;
+  font-style: normal;
+  margin: 5px;
+  text-align: left;
+}
+#h6Logo {
+  text-align: center;
+  margin: 5px;
+  font-size: 1.0rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#logoTypography {
+  margin: auto 0;
+}
+#headerGrid {
+  display: grid;
+  grid-template-areas: "logo navHeader logAndSearchHeader";
+  grid-template-columns: auto 6fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+#navHeader {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+.servis:hover {
+  font-size:large;
+  transition: 0.5s;
+}
+#logAndSearchHeader {
+  height: 120px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.asideNav {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: linear-gradient(45deg, gold, MediumOrchid);
+}
+.asideNavBorder {
+  width: 94px;
+  height: 92px;
+  border: solid 2px white;
+  border-radius: 50%;
+}
+.servis {
+  position: absolute;
+  top: 122px;
+}
+.hairstyle {
+  background-image: url('images/sprite/makeupNight.jpeg');
+  background-size: cover;
+}
+.makeup {
+  background-image: url('images/sprite/makeupWedding.jpeg');
+  background-size: cover;
+}
+.study {
+  background-image: url('images/sprite/stydy.jpg');
+  background-size: cover;
+}
+.servis2 {
+  background-image: url('images/sprite/servis2.jpeg');
+  background-size: cover;
+}
+.enterBorder {
+  width: 80px;
+  height: 80px;
+  background-image: url('images/logo2.PNG');
+  background-size: 50%;
+}
+.enter {
+  margin-top: 10px;
+  width: 88px;
+  height: 88px;
+}
+.search {
+  border-radius: 18px;
+  height: 56px;
+  width: 250px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+.searchBorder {
+  height: 46px;
+  border-radius: 15px;
+  width: 160px;
+  padding: 0 10px;
+}
+.buttonSearch {
+  width: 60px;
+  margin: 1px;
+}
+.listMenu a {
+  text-decoration: none;
+}
+.navigation i {
+  display: none;
+}
+.listMenu div {
+  width: 90%;
+  /* border: solid 3px; */
+  color: black;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  text-shadow: 1px 1px 5px #EE82EE;
+  box-shadow: inset 0 0px 10px 3px #E6E6FA;
+  
+}
+.listMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.listMenu div:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}

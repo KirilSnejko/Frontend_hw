@@ -1,0 +1,263 @@
+@media screen and (max-width: 1340px) {
+  #logAndSearchHeader .fa-angles-down {
+    display: block;
+    color: black;
+    font-size: 30px; 
+  }
+  #logAndSearchHeader a:not(:first-child) {
+    display: none;
+  }
+  header#pageHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #logAndSearchHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: solid 1px; */
+    width: 50px;
+  }
+  #logAndSearchHeader.show-all a {
+    display: block;
+  }
+}
+/* @media screen and (max-width: 1100px) {
+  #navHeader {
+    transform: scale(0.6);
+    justify-content: space-between;
+    
+  }
+  #headerGrid {
+    display: grid;
+    grid-template-areas: 
+    "div1 div3"
+    "div2 div2";
+    
+    grid-template-rows: auto;
+    grid-template-columns: 14fr 1fr;
+  }
+  #div#logo {
+    grid-area: div1;
+  }
+  #div#navHeader {
+    grid-area: div2;
+  }
+  div#logAndSearchHeader {
+    grid-area: div3;
+  }
+} */
+@media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
+    #headerGrid {
+      grid-template-areas: 
+        "navHeader logo logAndSearchHeader";
+      grid-template-columns: 1fr 10fr 1fr;
+    }
+  }
+  #navHeader {
+    grid-area: navHeader;
+    margin-top: 100px;
+    scale: 0.8;
+  }
+  #logo {
+    grid-area: logo;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #logAndSearchHeader {
+    grid-area: logAndSearchHeader;
+  }
+  #navHeader {
+    flex-direction: column;
+    height: auto;
+  }
+  #navHeader > a:not(:first-child) {
+    margin-bottom: 20px;
+  }
+  .makeupServis {
+    top: 95px;
+  }
+  .hairstyleServis {
+    top: 215px;
+  }
+  .studyServis {
+    top: 335px;
+  }
+  .servis2Servis {
+    top: 455px;
+  }
+  .flipMenuMakeup {
+    top: 45px;
+    left: 110px;
+  }
+  .flipMenuHairstyle {
+    top: 165px;
+    left: 110px;
+  }
+  .flipMenuMakeupStudy {
+    top: 285px;
+    left: 110px;
+  }
+  .flipMenuMakeupServis2 {
+    top: 405px;
+    left: 110px;
+  }
+  footer #h1Logo {
+    font-size: 2rem;
+  }
+  footer #h6Logo {
+    font-size: 0.75rem;
+  }
+  header .fa-instagram, header .fa-facebook {
+    font-size: 30px;
+  }
+  header .booksyLogo {
+    width: 60px;
+  }
+  #orderServiceInside {
+    font-size: 13px;
+    font-family: Garamond, serif;
+    color: black;
+    width: 52px;
+    height: 22px;
+    border: solid 2px white;
+    line-height: 0.7;
+
+  }
+  #orderService {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+  }
+
+
+}
+@media screen and (max-width: 700px) {
+
+  #logo {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  #borderLogo {
+    display: none;
+  }
+
+  #navHeader {
+  display: flex;
+    /* flex-direction: column; */
+  scale: 1;
+  margin-top: 0;
+  align-items: center;
+  width: 70px;
+  position: absolute;
+  left: 10px;
+  }
+
+  #navHeader .fa-bars {
+    display: block;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+  }
+
+  #navHeader a:not(:first-child) {
+    display: none;
+  }
+
+  #navHeader.show-all a {
+    display: block;
+    /* margin-top: 0; */
+  }
+
+  #h1Logo, footer #h1Logo {
+    font-size: 5vw;
+  }
+
+  #h6Logo, footer #h6Logo {
+    font-size: 1.5vw;
+  }
+
+  #navHeader .fa-bars, #logAndSearchHeader .fa-angles-down {
+    font-size: 25px;
+  }
+
+  header #logoTypography {
+    position: absolute;
+    left: 30%;
+  }
+  #pageHeader {
+    height: 100px;
+  }
+  #mainArticle {
+    margin-top: 0px;
+  }
+  .flipMenuMakeup {
+    top: 55px;
+    left: 75px;
+  }
+  .flipMenuHairstyle {
+    top: 145px;
+    left: 75px;
+  }
+  .flipMenuMakeupStudy {
+    top: 235px;
+    left: 75px;
+  }
+  .flipMenuMakeupServis2 {
+    top: 325px;
+    left: 75px;
+  }
+  .makeupServis {
+    top: 90px;
+  }
+  .hairstyleServis {
+    top: 185px;
+  }
+  .studyServis {
+    top: 275px;
+  }
+  .servis2Servis {
+    top: 375px;
+    line-height: 0.7;
+    text-align: center;
+
+  }
+  .asideNavBorder {
+    width: 62px;
+    height: 62px;
+  }
+  .asideNav {
+  width: 72px;
+  height: 72px;
+  }
+  #pageHeader {
+    position: relative;
+  }
+  .footerLeft {
+    font-size: 10px;
+  }
+  address {
+    font-size: 10px;
+  }
+  .logAndSearchFooter .fa-brands {
+    font-size: 25px;
+  }
+  .logAndSearchFooter .booksyLogo {
+    width: 50px;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
