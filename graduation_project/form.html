@@ -17,17 +17,16 @@
   form {
     height: 500px;
     width: 500px;
-    border: solid 1px;
+    /* border: solid 1px; */
     margin: 50px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Great Vibes", cursive;
-    
   }
   article {
-    height: 600px;
+    height: auto;
   }
   .formList {
     width: 80%;
@@ -35,16 +34,132 @@
     border-radius: 10px;
     box-shadow: 1px 1px 3px 	MediumOrchid;
     padding: 3px;
-  }
-  select {
+    height: 50px;
     font-family: Garamond, serif;
     font-size: 1.5rem;
-    width: 100%;
-    border-radius: 10px;
-    border-style: none;
+    box-sizing: border-box;
+    margin: 15px 0;
   }
   select option:not(:first-child) {
     font-size: 1.25rem;
+  }
+  input[value="Ваше имя"], #chooseServis {
+    color: gray; 
+  }
+  #messageDescriptions {
+    height: 150px;
+  }
+  article h1 {
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    width: 80%;
+    /* border: solid 1px; */
+    margin: 50px auto; 
+    color: #2F4F4F;
+  }
+  button {
+    background-color: white;
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    border:none;
+    font-family: Garamond, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2F4F4F;
+    box-shadow: 0 0 10px 5px rgba(199, 21, 133, 0.5);
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease;
+    z-index: 1;
+  }
+  .buttonForm {
+    background-image: linear-gradient(45deg,gold,MediumOrchid);
+    width: 120px;
+    height: 30px;
+    border-radius: 18px;
+    padding: 3px;
+
+  }
+  button:active {
+    transform: translateY(4px);
+  }
+  header {
+    z-index: 2;
+  }
+  input:focus, textarea:focus, select:focus {
+    border-color: mediumvioletred;
+    border-width: 2px;
+    outline: none;
+  }
+  option {
+    background-color: #f0f0f0; /* Цвет фона */
+    color: #333; /* Цвет текста */
+  }
+  /* select:hover option:hover {
+    background-color: mediumvioletred;
+  } */
+  #error {
+      color: red;
+      font-size: 100%;
+      font-family: Garamond, serif;
+      text-align: left;
+      align-self: flex-start;
+      margin-left: 50px;
+    }
+  #enterEmail {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 1130px) {
+    article h1 {
+      font-size: 2.5rem;
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+     article h1 {
+      font-size: 1.5rem;
+    }
+    .formList {
+      width: 70%;
+      border-radius: 6px;
+      box-shadow: 1px 1px 3px 	MediumOrchid;
+      padding: 1px;
+      height: 30px;
+      font-family: Garamond, serif;
+      font-size: 1.0rem;
+      box-sizing: border-box;
+      margin: 10px 0;
+    }
+    .formList {
+      font-size: 1.0rem;
+    }
+    form {
+      width: auto;
+      height: auto;
+    }
+    button {
+      width: 90px;
+      height: 30px;
+      border-radius: 13px;
+      font-size: 1.0rem;
+      font-weight: 700;
+      box-shadow: 0 0 10px 5px rgba(199, 21, 133, 0.5);
+    }
+    .buttonForm {
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 3px;
+    }
+    #error {
+      font-size: 80%;
+      margin-left: 15%;
+    }
   }
 </style>
 <body>
@@ -123,16 +238,23 @@
       </div>
     </header>
     <article id="mainArticle">
-      <form form method="get" action="https://fe.it-academy.by/TestForm.php">
-        <div class="formList">
-          <select name="heading">
-            <option value="" disabled selected hidden>Выберите услугу</option> 
-            <option value="1">Макияж</option>
-            <option value="2">Прическа</option>
-            <option value="3">Обучение</option>
-            <option value="4">Свадебный пакет</option>
-          </select>
-        </div>
+      <h1 id="articleH1">
+        Свяжитесь со мной, я буду рада ответить на ваши вопросы
+      </h1>
+      <form method="get" action="https://fe.it-academy.by/TestForm.php" id="contactForm">
+        <select name="heading" class="formList">
+          <option value="" disabled selected hidden id="defaultOption">Выберите услугу</option> 
+          <option value="1">Макияж</option>
+          <option value="2">Прическа</option>
+          <option value="3">Обучение</option>
+          <option value="4">Свадебный пакет</option>
+        </select>
+        <input type="text" id="enterName" class="formList" placeholder="Введите ваше Имя">
+        <input type="email" id="enterEmail" name="email" class="formList" placeholder="Введите ваш email">
+        <div id="error"></div>
+        <input type="text" name="phone" class="formList" placeholder="Введите ваш телефон">
+        <textarea name="descriptions" id="messageDescriptions" class="formList" placeholder="Опишите подробно информацию о заказываемой услуге и дате" rows="3" cols="1"></textarea>
+        <div class="buttonForm"><button type="submit">Отправить</button></div>
       </form>
     </article>
     <footer id="pageFooter">
@@ -219,5 +341,20 @@
   </div>
   <script src="https://kit.fontawesome.com/9b36b40e7b.js" crossorigin="anonymous"></script>
   <script src="main.js"></script> 
+  <script>
+    let input = document.getElementById('enterEmail');
+    let error = document.getElementById('error');
+    let form = document.getElementById('contactForm');
+    
+
+    form.addEventListener('submit', function(event) {
+      error.textContent = '';
+
+      if (input.value.trim() === '') {
+        event.preventDefault();
+        error.textContent = '(поле не может быть пустым)'
+      }
+    });
+  </script>
 </body>
 </html>
