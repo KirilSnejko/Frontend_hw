@@ -1,15 +1,23 @@
 body {
   margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+body {
+  margin: 0;
   width: 100%;
   height: 100%;
 }
 header {
   position: fixed;
   height: 165px;
+  z-index: 100;
 }
-article {
+main {
   margin-top: 165px;
-  height: 1000px;
+  height: auto;
   /* border: solid 1px; */
 }
 header, footer, nav {
@@ -22,7 +30,7 @@ header, footer, nav {
   display: grid;
   grid-template-areas: 
     "header"
-    "article"
+    "main"
     "footer"; 
   grid-template-rows: auto;
   grid-template-columns: auto;
@@ -37,8 +45,8 @@ header, footer, nav {
   grid-area: footer;
   /* height: 150px; */
 }
-#mainArticle { 
-  grid-area: article;      
+#mainMain { 
+  grid-area: main;      
 }
 /* #mainNav { 
   grid-area: nav;
@@ -212,7 +220,9 @@ header, footer, nav {
 #logAndSearchHeader .fa-angles-down {
   display: none;
 }
-
+div.asideNav:hover {
+  cursor: pointer;
+}
 
 
 

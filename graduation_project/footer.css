@@ -4,6 +4,8 @@
   width: 100%;
   gap: 20px;
   justify-content: center;
+  position: static;
+  bottom: 0;
 }
 
 #footerLeftId {
