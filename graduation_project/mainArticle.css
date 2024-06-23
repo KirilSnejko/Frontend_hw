@@ -2,16 +2,13 @@ article {
   /* border: solid 1px black; */
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
 }
 main {
   width: 100%;
   display: flex;
   flex-direction: column;
-}
-article {
-  display: flex;
-  flex-direction: column;
-  
 }
 
 .articleTitle {
@@ -20,8 +17,9 @@ article {
   flex-direction: column;
   font-family: Garamond, serif;
   width: 100%;
-  margin: 50px auto 0 auto;
+  /* margin: 50px auto 0 auto; */
   /* padding: 50px 0; */
+  /* margin-left: auto; */
   background-color: #FFE4E1;
   justify-content: center;
 }

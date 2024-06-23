@@ -24,31 +24,6 @@
     display: block;
   }
 }
-/* @media screen and (max-width: 1100px) {
-  #navHeader {
-    transform: scale(0.6);
-    justify-content: space-between;
-    
-  }
-  #headerGrid {
-    display: grid;
-    grid-template-areas: 
-    "div1 div3"
-    "div2 div2";
-    
-    grid-template-rows: auto;
-    grid-template-columns: 14fr 1fr;
-  }
-  #div#logo {
-    grid-area: div1;
-  }
-  #div#navHeader {
-    grid-area: div2;
-  }
-  div#logAndSearchHeader {
-    grid-area: div3;
-  }
-} */
 @media screen and (max-width: 1100px) {
   @media screen and (max-width: 1100px) {
     #headerGrid {
@@ -133,9 +108,77 @@
     height: 30px;
     border-radius: 5px;
   }
+  div.articleTitle {
+    width: calc(100% - 150px);
+    margin-left: auto;
+  }
+  div.articleTitle h2{
+    font-size: 2rem;
+    /* margin-left: 130px; */
+  }
+  div.articleTitle h3{
+    font-size: 1.25rem;
+    /* margin-left: 130px; */
+  }
+  div.articleTitleDetails h3 {
+    font-size: 1.5rem;
+    /* margin-left: 130px; */
+  }
+  div.articleTitleDetails p {
+    font-size: 1.0rem;
+    /* margin-left: 130px; */
+  }
+  div.outSideContainerPack {
+    display: flex;
+    max-width: 200px;
+  }
+  div.packCard {
+    display: flex;
+    width: 190px;
+    height: 390px;
+  }
+  div.packStar i {
+    font-size: 1rem;
+  }
+  div.band h3 {
+    font-size: 1.25rem;
+    margin-left: auto;
+  }
+  div.packCard li {
+    font-size: 1rem ;
+  }
+  div#navHeader {
+    gap: 20px;
+  }
+  div.cardMakeup {
+    width: 250px;
+    gap: 10px;
+    
+  }
+  div.cardMakeup img {
+    max-width: 250px;
+    max-height: 300px;
+  }
+  div.studyAnimation {
+    width: 250px;
+    height: 300px;
+  }
+  div.img1Slider, div.img2Slider {
+    background-size: cover;
+    width: 250px;
+    height: 300px;
+  }
+  div.articleTitleDetails, div.containerMainArticle, footer#pageFooter {
+    width: calc(100% - 150px);
+    margin-left: auto;
+  }
+  div.iframeContainer {
+    margin-left: 300px;
+  }
+  
+  
 
 
-}
 @media screen and (max-width: 700px) {
 
   #logo {
