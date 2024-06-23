@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup & Hairstyle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index6.css" type="text/css">
+  <link rel="stylesheet" href="footer.css" type="text/css">
+  <link rel="stylesheet" href="form.css" type="text/css">
+  <link rel="stylesheet" href="media.css" type="text/css">
+  <link rel="icon" href="faviconMakeup.ico" type="image/x-icon">
+</head>
+<style>
+  form {
+    height: 500px;
+    width: 500px;
+    /* border: solid 1px; */
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Great Vibes", cursive;
+  }
+  article {
+    height: auto;
+  }
+  .formList {
+    width: 80%;
+    border: solid 1px #A9A9A9;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 	MediumOrchid;
+    padding: 3px;
+    height: 50px;
+    font-family: Garamond, serif;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    margin: 15px 0;
+  }
+  select option:not(:first-child) {
+    font-size: 1.25rem;
+  }
+  input[value="Ваше имя"], #chooseServis {
+    color: gray; 
+  }
+  #messageDescriptions {
+    height: 150px;
+  }
+  article h1 {
+    font-family: "Great Vibes", cursive;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    width: 80%;
+    /* border: solid 1px; */
+    margin: 50px auto; 
+    color: #2F4F4F;
+  }
+  button {
+    background-color: white;
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    border:none;
+    font-family: Garamond, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2F4F4F;
+    box-shadow: 0 0 10px 5px rgba(199, 21, 133, 0.5);
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease;
+    z-index: 1;
+  }
+  .buttonForm {
+    background-image: linear-gradient(45deg,gold,MediumOrchid);
+    width: 120px;
+    height: 30px;
+    border-radius: 18px;
+    padding: 3px;
+
+  }
+  button:active {
+    transform: translateY(4px);
+  }
+  header {
+    z-index: 2;
+  }
+  input:focus, textarea:focus, select:focus {
+    border-color: mediumvioletred;
+    border-width: 2px;
+    outline: none;
+  }
+  option {
+    background-color: #f0f0f0; /* Цвет фона */
+    color: #333; /* Цвет текста */
+  }
+  /* select:hover option:hover {
+    background-color: mediumvioletred;
+  } */
+  #error {
+      color: red;
+      font-size: 100%;
+      font-family: Garamond, serif;
+      text-align: left;
+      align-self: flex-start;
+      margin-left: 50px;
+    }
+  #enterEmail {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 1130px) {
+    article h1 {
+      font-size: 2.5rem;
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+     article h1 {
+      font-size: 1.5rem;
+    }
+    .formList {
+      width: 70%;
+      border-radius: 6px;
+      box-shadow: 1px 1px 3px 	MediumOrchid;
+      padding: 1px;
+      height: 30px;
+      font-family: Garamond, serif;
+      font-size: 1.0rem;
+      box-sizing: border-box;
+      margin: 10px 0;
+    }
+    .formList {
+      font-size: 1.0rem;
+    }
+    form {
+      width: auto;
+      height: auto;
+    }
+    button {
+      width: 90px;
+      height: 30px;
+      border-radius: 13px;
+      font-size: 1.0rem;
+      font-weight: 700;
+      box-shadow: 0 0 10px 5px rgba(199, 21, 133, 0.5);
+    }
+    .buttonForm {
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 3px;
+    }
+    #error {
+      font-size: 80%;
+      margin-left: 15%;
+    }
+  }
+</style>
+<body>
+  <div class="gridContainer">
+    <header id="pageHeader">
+      <div id="headerGrid">
+        <a href="index.html" style="text-decoration: none; color: black;">
+          <div id="logo">
+            <div id="borderLogo">
+              <div id="centerLogo"></div>
+            </div>
+            <div id="logoTypography">
+              <h1 id="h1Logo">Marina Sniezhko</h1>
+              <h6 id="h6Logo">MAKEUP & HAIRSTYLE</h6>
+            </div>
+          </div>
+        </a>
+        <div id="navHeader">
+          <a href="#" style="text-decoration: none;"><i class="fa-solid fa-bars"></i></a>
+          <a href="#" class="asideNavInside">
+            <div class="asideNav">
+              <div class="asideNavBorder makeup"></div>
+              <div class="servis makeupServis">макияж</div>
+              <div class="flipMenu flipMenuMakeup">
+                <div>свадебный</div>
+                <div>вечерний</div>
+                <div>для фотосесии</div>
+                <div>дневной</div>
+                <div>смоки</div>
+                <div>тематический</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="asideNavInside">
+            <div class="asideNav">
+              <div class="asideNavBorder hairstyle"></div>
+              <div class="servis hairstyleServis">прически</div>
+              <div class="flipMenu flipMenuHairstyle">
+                <div>волна</div>
+                <div>пучек</div>
+                <div>свадебные</div>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="asideNavInside">
+            <div class="asideNav">
+              <div class="asideNavBorder study"></div>
+              <div class="servis studyServis">обучение</div>
+              <div class="flipMenu flipMenuMakeupStudy">
+                <div>макияж для себя</div>
+                <div>базовый курс</div>
+                <div>проф курс</div>
+              </div> 
+            </div>
+          </a>
+          <a href="#" class="asideNavInside">
+            <div class="asideNav">
+              <div class="asideNavBorder servis2"></div>
+              <div class="servis servis2Servis">свадебные пакеты</div>
+              <div class="flipMenu flipMenuMakeupServis2">
+                <div>Small - 4 услуги</div>
+                <div>Medium - 6 услуг</div>
+                <div>Large - 8 услуг</div>
+                <div>цены</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div id="logAndSearchHeader">
+          <a href="#" style="text-decoration: none;"><i class="fa-solid fa-angles-down" ></i></a>
+          <a href="https://www.instagram.com/makeup_marina_sniezhko?igsh=YXJtNnQxajZtN21h" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/MarinaSnezhko8" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://booksy.com/pl-pl/179009_makijaz-fryzury-brwi-marina-sniezko_makijaz_13750_wroclaw#ba_s=seo" target="_blank"><img src="images/booksy.JPG" alt="" class="booksyLogo"></a>
+          <a href="form.html" style="text-decoration: none;"><div class="asideNav" id="orderService"><div class="asideNavBorder" id="orderServiceInside">заказать услугу</div></div></a>
+        </div>
+      </div>
+    </header>
+    <article id="mainArticle">
+      <h1 id="articleH1">
+        Свяжитесь со мной, я буду рада ответить на ваши вопросы
+      </h1>
+      <form method="get" action="https://fe.it-academy.by/TestForm.php" id="contactForm">
+        <select name="heading" class="formList">
+          <option value="" disabled selected hidden id="defaultOption">Выберите услугу</option> 
+          <option value="1">Макияж</option>
+          <option value="2">Прическа</option>
+          <option value="3">Обучение</option>
+          <option value="4">Свадебный пакет</option>
+        </select>
+        <input type="text" id="enterName" class="formList" placeholder="Введите ваше Имя">
+        <input type="email" id="enterEmail" name="email" class="formList" placeholder="Введите ваш email">
+        <div id="error"></div>
+        <input type="text" name="phone" class="formList" placeholder="Введите ваш телефон">
+        <textarea name="descriptions" id="messageDescriptions" class="formList" placeholder="Опишите подробно информацию о заказываемой услуге и дате" rows="3" cols="1"></textarea>
+        <div class="buttonForm"><button type="submit">Отправить</button></div>
+      </form>
+    </article>
+    <footer id="pageFooter">
+      <div id="footerLeftId">
+        <div class="footerLeft makeHair">
+          <a href=""><h2>Макияж</h2></a>
+          <ul>
+            <a href=""><li>Свадебный</li></a>
+            <a href=""><li>Вечерний</li></a>
+            <a href=""><li>Для фотосесии</li></a>
+            <a href=""><li>Дневной</li></a>
+            <a href=""><li>Смоки-айз</li></a>
+            <a href=""><li>Тематический</li></a>
+          </ul>
+        </div>
+        <div class="footerLeft makeHair">
+          <a href=""><h2>Прически</h2></a>
+          <ul>
+            <a href=""><li>Волна</li></a>
+            <a href=""><li>Пучок</li></a>
+            <a href=""><li>Свадебные</li></a>
+          </ul>
+        </div>
+        <div class="footerLeft studyFoot">
+          <a href=""><h2>Обучение</h2></a>
+          <ul>
+            <a href=""><li>Макияж для себя</li></a>
+            <a href=""><li>Базовый курс</li></a>
+            <a href=""><li>Проф курс</li></a>
+          </ul>
+        </div>
+        <div class="footerLeft packFoot">
+          <a href=""><h2>Свадебные пакеты</h2></a>
+          <ul>
+            <a href=""><li>Пакет на 4 услуги</li></a>
+            <a href=""><li>Пакет на 6 услуг</li></a>
+            <a href=""><li>Пакет на 8 услуг</li></a>
+          </ul>
+        </div>
+        <div class="footerLeft aboutMeFoot">
+          <a href=""><h2>Обо мне</h2></a>
+          <ul>
+            <a href=""><li>Обо мне</li></a>
+            <a href=""><li>Контакт</li></a>
+          </ul>
+        </div>
+        <div class="footerLeft pricesFoot">
+          <a href=""><h2>Услуги</h2></a>
+          <ul>
+            <a href=""><li>Цены</li></a>
+            <a href="form.html"><li>Заказать услугу</li></a>
+          </ul>
+        </div>
+      </div>
+      <div id="footerRightId">
+        <div id="footerRightContainer">
+          <div id="footerRight1">
+            <a href="" style="text-decoration: none; color: black;">
+              <div id="logo">
+                <div id="borderLogo">
+                  <div id="centerLogo"></div>
+                </div>
+                <div id="logoTypography">
+                  <h1 id="h1Logo">Marina Sniezhko</h1>
+                  <h6 id="h6Logo">MAKEUP & HAIRSTYLE</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.7802233116013!2d27.555556312385598!3d53.91788123169139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf9a9c4ff399%3A0x90c2dc783a67bc1b!2spraspiekt%20Ma%C5%A1erava%2054%2C%20Minsk%2C%20Minskaja%20voblas%C4%87%2C%20Belarus!5e0!3m2!1sen!2spl!4v1718385113984!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <address>
+            <p>Минск</p>
+            <p>пр.Машерова, 54</p>
+            <p>тел: (29)1830398</p>
+          </address>
+          <div class="logAndSearchFooter">
+            <a href="https://www.instagram.com/makeup_marina_sniezhko?igsh=YXJtNnQxajZtN21h" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/MarinaSnezhko8" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://booksy.com/pl-pl/179009_makijaz-fryzury-brwi-marina-sniezko_makijaz_13750_wroclaw#ba_s=seo" target="_blank"><img src="images/booksy.JPG" alt="" class="booksyLogo"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://kit.fontawesome.com/9b36b40e7b.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script> 
+  <script>
+    let input = document.getElementById('enterEmail');
+    let error = document.getElementById('error');
+    let form = document.getElementById('contactForm');
+    
+
+    form.addEventListener('submit', function(event) {
+      error.textContent = '';
+
+      if (input.value.trim() === '') {
+        event.preventDefault();
+        error.textContent = '(поле не может быть пустым)'
+      }
+    });
+  </script>
+</body>
+</html>

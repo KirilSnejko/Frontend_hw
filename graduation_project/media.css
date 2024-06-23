@@ -7,6 +7,9 @@
   #logAndSearchHeader a:not(:first-child) {
     display: none;
   }
+  #logAndSearchHeader a.activeMenu {
+    display: flex;
+  }
   header#pageHeader {
     width: 100%;
     display: flex;
@@ -23,6 +26,14 @@
   #logAndSearchHeader.show-all a {
     display: block;
   }
+  div.flipMenu.active {
+    width: 80%;
+    right: 0;
+    left: auto;
+  }
+  .fa-angles-down:hover {
+    cursor: pointer;
+  } 
 }
 @media screen and (max-width: 1100px) {
   @media screen and (max-width: 1100px) {
@@ -34,8 +45,7 @@
   }
   #navHeader {
     grid-area: navHeader;
-    margin-top: 100px;
-    scale: 0.8;
+    scale: 1;
   }
   #logo {
     grid-area: logo;
@@ -45,10 +55,14 @@
   }
   #logAndSearchHeader {
     grid-area: logAndSearchHeader;
+    position: absolute;
+    top: 60px;
+    right: 20px;
   }
   #navHeader {
     flex-direction: column;
     height: auto;
+    margin-top: 60px;
   }
   #navHeader > a:not(:first-child) {
     margin-bottom: 20px;
@@ -65,21 +79,28 @@
   .servis2Servis {
     top: 455px;
   }
-  .flipMenuMakeup {
+  .flipMenu div {
+    margin: 0;
+  }
+  div.flipMenu.flipMenuMakeup {
     top: 45px;
-    left: 110px;
+    left: 120px;
+    flex-direction: column;
   }
-  .flipMenuHairstyle {
+  div.flipMenu.flipMenuHairstyle {
     top: 165px;
-    left: 110px;
+    left: 120px;
+    flex-direction: column;
   }
-  .flipMenuMakeupStudy {
+  div.flipMenu.flipMenuMakeupStudy {
     top: 285px;
     left: 110px;
+    flex-direction: column;
   }
-  .flipMenuMakeupServis2 {
+  div.flipMenu.flipMenuMakeupServis2 {
     top: 405px;
     left: 110px;
+    flex-direction: column;
   }
   footer #h1Logo {
     font-size: 2rem;
@@ -108,25 +129,17 @@
     height: 30px;
     border-radius: 5px;
   }
-  div.articleTitle {
-    width: calc(100% - 150px);
-    margin-left: auto;
-  }
   div.articleTitle h2{
     font-size: 2rem;
-    /* margin-left: 130px; */
   }
   div.articleTitle h3{
     font-size: 1.25rem;
-    /* margin-left: 130px; */
   }
   div.articleTitleDetails h3 {
     font-size: 1.5rem;
-    /* margin-left: 130px; */
   }
   div.articleTitleDetails p {
     font-size: 1.0rem;
-    /* margin-left: 130px; */
   }
   div.outSideContainerPack {
     display: flex;
@@ -152,12 +165,15 @@
   }
   div.cardMakeup {
     width: 250px;
-    gap: 10px;
-    
+    /* gap: 10px;  */
+  }
+  div.packConteiner {
+    gap: 15px;
+    flex-wrap: wrap;
   }
   div.cardMakeup img {
-    max-width: 250px;
-    max-height: 300px;
+    width: 250px;
+    height: 300px;
   }
   div.studyAnimation {
     width: 250px;
@@ -168,19 +184,65 @@
     width: 250px;
     height: 300px;
   }
-  div.articleTitleDetails, div.containerMainArticle, footer#pageFooter {
-    width: calc(100% - 150px);
+  div.articleTitleDetails, div.containerMainArticle, footer#pageFooter, div.articleTitle {
+    width: calc(100% - 120px);
     margin-left: auto;
   }
   div.iframeContainer {
-    margin-left: 300px;
+    margin-left: 30%;
   }
-  
+  div.servis {
+    font-size: 1.4em;
+  }
+  div.servis:hover {
+    font-size: 1.25em;
+  }
+
   
 
 
 @media screen and (max-width: 700px) {
-
+  div.articleTitleDetails, div.containerMainArticle, footer#pageFooter, div.articleTitle {
+    width: 100%;
+  }
+  main#mainMain {
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  div.articleTitle h2 {
+    font-size: 4.5vw;
+  }
+  div.articleTitle h3 {
+    font-size: 3.5vw;
+  }
+  div.articleTitleDetails h3 {
+    font-size: 3.5vw;
+  }
+  div.articleTitleDetails p {
+    font-size: 4vw;
+    margin-top: 20px;
+  }
+  main div.containerMainArticle {
+    padding: 0;
+    gap: 5px;
+  }
+  article div.cardMakeup {
+    width: 100%;
+  }
+  article div.cardMakeup p {
+    font-size: 4vw;
+  }
+  article div.cardMakeup img {
+    width: 100%;
+    height: 500px;
+  }
+  .studyAnimation {
+    margin: 0 auto;
+  }
+  article .containerMainArticle a {
+    width: 100%;
+  }
   #logo {
     flex-wrap: wrap;
     align-items: flex-start;
@@ -194,7 +256,7 @@
   display: flex;
     /* flex-direction: column; */
   scale: 1;
-  margin-top: 0;
+  margin-top: 60px;
   align-items: center;
   width: 70px;
   position: absolute;
@@ -202,13 +264,13 @@
   }
 
   #navHeader .fa-bars {
-    display: block;
+    display: flex;
     font-size: 30px;
     color: black;
     cursor: pointer;
   }
 
-  #navHeader a:not(:first-child) {
+  #navHeader div:not(:first-child) {
     display: none;
   }
 
@@ -217,11 +279,20 @@
     /* margin-top: 0; */
   }
 
-  #h1Logo, footer #h1Logo {
+  header #h1Logo {
+    font-size: 7vw;
+    
+  } 
+  
+  footer #h1Logo {
     font-size: 5vw;
   }
 
-  #h6Logo, footer #h6Logo {
+  header #h6Logo {
+    font-size: 2vw;
+  } 
+  
+  footer #h6Logo {
     font-size: 1.5vw;
   }
 
@@ -231,7 +302,8 @@
 
   header #logoTypography {
     position: absolute;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   #pageHeader {
     height: 100px;
@@ -294,7 +366,16 @@
     width: 50px;
     margin: 0;
   }
+  #navHeader div:not(:first-child) {
+    display: none;
+  }
+  
+  #navHeader.show-all div {
+    display: flex;
+  }
+
 }
+active
 
 
 

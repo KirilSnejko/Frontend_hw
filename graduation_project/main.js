@@ -1,41 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-  let flipMenus = document.querySelectorAll('.flipMenu');
+  const navHeaderPanel = document.getElementById('navHeaderPanel');
+  const asideNavs = document.querySelectorAll('.asideNav');
+  let currentActiveMenu = null;
 
-  document.addEventListener('click', function(event) {
-    flipMenus.forEach(function(menu) {
-      if (!menu.contains(event.target) && !menu.parentElement.contains(event.target)) {
-        menu.classList.remove('active');
+  asideNavs.forEach(nav => {
+    nav.addEventListener('click', function() {
+      const flipMenu = nav.querySelector('.flipMenu');
+
+      if (currentActiveMenu === flipMenu) {
+        flipMenu.classList.remove('active');
+        navHeaderPanel.style.opacity = '0';
+        currentActiveMenu = null;
+        asideNavs.forEach(nav => nav.classList.remove('active-button'));
+      } else {
+        document.querySelectorAll('.flipMenu').forEach(menu => menu.classList.remove('active'));
+        flipMenu.classList.add('active');
+        navHeaderPanel.style.opacity = '0.5';
+        currentActiveMenu = flipMenu;
+        asideNavs.forEach(nav => nav.classList.remove('active-button'));
+        nav.classList.add('active-button');
       }
     });
   });
 
-  flipMenus.forEach(function(menu) {
-    menu.parentElement.addEventListener('click', function(event) {
-      event.stopPropagation(); // предотвращаем всплытие события
-      
-      // Скрываем все открытые меню перед открытием текущего
-      flipMenus.forEach(function(m) {
-        if (m !== menu) {
-          m.classList.remove('active');
-        }
-      });
-
-      // Переключаем активность текущего меню
-      menu.classList.toggle('active');
-    });
-  });
-});
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
   let anglesDown = document.querySelector('#logAndSearchHeader i.fa-solid.fa-angles-down');
   anglesDown.addEventListener('click', function() {
     let logAndSearchHeader = document.getElementById('logAndSearchHeader');
     logAndSearchHeader.classList.toggle('show-all');
   });
-});
 
-document.addEventListener('DOMContentLoaded', (event) => {
   let butMenu = document.querySelector('#navHeader .fa-bars');
   butMenu.addEventListener('click', function() {
     let navHeader = document.getElementById('navHeader');
@@ -43,6 +36,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 
+
+
+  
+    
 
 
 

@@ -53,7 +53,7 @@
 }
 
 .logAndSearchFooter .booksyLogo {
-  margin: 10px 5px;
+  margin: 5px 5px;
   width: 60px;
   border-radius: 5px;
 }
@@ -71,4 +71,16 @@ footer {
 }
 header {
   background: white;
+}
+ul li {
+  font-size: 1.5em;
+}
+footer h2 {
+  font-size: 2.0em;
+}
+address {
+  font-size: 1.5em;
+}
+.articleTitle {
+  padding-bottom: 10px;
 }
